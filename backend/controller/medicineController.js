@@ -84,7 +84,7 @@ export const getbyid = async (req, res) => {
 
     const data = await Medicine.find({ userId: id });
 
-    return res.status(200).json(data); // ✅ ARRAY
+    return res.status(200).json(data); 
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }

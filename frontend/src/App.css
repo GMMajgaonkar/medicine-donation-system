@@ -1,0 +1,148 @@
+/* Container for responsive scroll */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+/* Table base */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header */
+thead {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+thead th {
+  color: #ffffff;
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Body rows */
+tbody tr {
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f8f9ff;
+}
+
+tbody tr:hover {
+  background-color: #eef1ff;
+  transform: scale(1.01);
+}
+
+/* Cells */
+td {
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #333;
+  vertical-align: middle;
+}
+
+/* Images */
+td img {
+  width: 90px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+
+/* Empty state */
+.no-data {
+  text-align: center;
+  padding: 20px;
+  font-weight: 500;
+  color: #777;
+}
+
+/* Mobile friendly */
+@media (max-width: 768px) {
+  table {
+    font-size: 13px;
+  }
+
+  td, th {
+    padding: 10px;
+  }
+}
+
+/* Page container */
+.home {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e8f5e9, #ffffff);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Animated title (marquee replacement) */
+.marquee {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: slide 10s linear infinite;
+}
+
+/* Animation */
+@keyframes slide {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Image container */
+.image {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Image styling */
+.image img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover effect */
+.image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .marquee {
+    font-size: 2rem;
+  }
+}
+

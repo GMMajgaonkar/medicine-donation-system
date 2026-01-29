@@ -59,7 +59,11 @@ export const Application = () => {
             <td>{items.phone}</td>
             <td>{items.expiry}</td>
             <td>{items.quantity}</td>
-            <td>{items.image}</td>
+            <td> <img
+                    src={`http://localhost:8080/uploads/${items.file}`}
+                    alt="medicine"
+                    width="80"
+                  /></td>
             <td>{items.status}</td>
            <td className="flex justify-between">
                   <button

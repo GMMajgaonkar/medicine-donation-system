@@ -1,9 +1,9 @@
 import axios from "axios";
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 export const Addmedicine=()=>{
   
-
+ const nevigate=useNavigate()
  const [medicine, setmedicine] = useState({
     Medicine_name: "",
     email: "",
@@ -44,7 +44,9 @@ const res = await axios.post(
 );
       
       console.log(res.data);
-      
+      alert("Added successfully");
+           
+
     } catch (error) {
       console.log(error.response?.data);
     }

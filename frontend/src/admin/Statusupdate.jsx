@@ -56,7 +56,7 @@ export const Statusupdate = () => {
             );
 
             console.log(res.data);
-            alert("Medicine updated successfully");
+            alert("status updated successfully");
             nevigate("/Application")
 
         } catch (error) {
